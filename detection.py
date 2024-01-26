@@ -195,6 +195,6 @@ class MPObject():
         os.system(command)
 
     def save_data(self, out_path):
-        # 最初から10フレームだけ記録する
-        df = pd.DataFrame(self.data[:10], columns=self.label)
+        # 最初から30フレーム*60秒だけ記録する
+        df = pd.DataFrame(self.data[:1800], columns=self.label)
         df.to_csv(out_path)
